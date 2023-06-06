@@ -7,6 +7,7 @@ import 'package:financeiro_app/services/mock_auth_service.dart';
 import 'package:flutter/material.dart';
 import '../../common/constants/app_colors.dart';
 import '../../common/constants/app_text_style.dart';
+import '../../common/constants/routes.dart';
 import '../../common/utils/validator.dart';
 import '../../common/widgets/custom_circular_progress_indicator.dart';
 import '../../common/widgets/custom_text_field_form.dart';
@@ -143,7 +144,10 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
           ),
           GestureDetector(
-            onTap: () => log('Teste'),
+            onTap: () => Navigator.popAndPushNamed(
+              context,
+              NamedRoutes.signIn,
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

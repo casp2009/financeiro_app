@@ -77,16 +77,13 @@ class _SignInPageState extends State<SignInPage> {
             height: 30,
           ),
           Text(
-            "Spend Smarter",
+            "Welcome Back!",
             textAlign: TextAlign.center,
             style: AppTextStyle.mediumText.copyWith(color: AppColors.greenTwo),
           ),
-          Text(
-            "Save More",
-            textAlign: TextAlign.center,
-            style: AppTextStyle.mediumText.copyWith(color: AppColors.greenTwo),
-          ),
-          Image.asset("assets/images/todo_list.png"),
+          const SizedBox(height: 15.0),
+          Image.asset("assets/images/login_image.png"),
+          const SizedBox(height: 15.0),
           Form(
             key: _formKey,
             child: Column(
@@ -98,7 +95,7 @@ class _SignInPageState extends State<SignInPage> {
                   hintText: "seuemail@email.com",
                 ),
                 PassWordFormField(
-                  labelText: 'Informe a senha',
+                  labelText: 'Sua Senha',
                   //validator: Validator.validateSenha,
                   hintText: '********',
                   controller: _passwordController,
@@ -129,7 +126,7 @@ class _SignInPageState extends State<SignInPage> {
             ),
           ),
           GestureDetector(
-            onTap: () => Navigator.pushReplacementNamed(
+            onTap: () => Navigator.popAndPushNamed(
               context,
               NamedRoutes.signUp,
             ),
@@ -137,7 +134,7 @@ class _SignInPageState extends State<SignInPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Do not have an account? ',
+                  'Don\'t have account? ',
                   style: AppTextStyle.smallText.copyWith(color: AppColors.grey),
                 ),
                 Text(

@@ -46,7 +46,7 @@ class OnboardingPage extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () => Navigator.pushReplacementNamed(
+            onTap: () => Navigator.pushNamed(
               context,
               NamedRoutes.signIn,
             ),
